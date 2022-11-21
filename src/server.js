@@ -21,5 +21,5 @@ const PORT = process.env.PORT || 8080;
 // PORT === undefined => port = 8080
 
 app.listen(PORT, () => {
-  console.log("Backend Nodejs is running on the port: " + port);
+  console.log("Backend Nodejs is running on the port: " + PORT);
 });
