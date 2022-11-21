@@ -3,7 +3,7 @@ import CRUDAccountService from "../services/CRUDAccountService";
 
 let getHomePage = async (req, res) => {
   try {
-    let data = await db.User.findAll();
+    let data = await db.Account.findAll();
     return res.render("homePage.ejs", {
       data: JSON.stringify(data),
     });
