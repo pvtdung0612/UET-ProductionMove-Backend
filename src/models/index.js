@@ -32,11 +32,11 @@ const sequelize = new Sequelize(
   validationDB.dbPassword,
   {
     host: process.env.DB_HOST,
-    dialect: "postgres",
+    dialect: process.env.DB_DIALECT,
     logging: false,
-    // query: {
-    //   raw: true,
-    // },
+    query: {
+      raw: true,
+    },
     timezone: process.env.DB_TIMEZONE,
   }
 );
