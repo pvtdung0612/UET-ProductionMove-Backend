@@ -2,5 +2,6 @@
 /vendor
 /.idea
 .idea/
+# .env
 
-MyNote.txt
+# MyNote.txt

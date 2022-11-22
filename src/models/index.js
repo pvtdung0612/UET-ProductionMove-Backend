@@ -32,8 +32,11 @@ const sequelize = new Sequelize(
   validationDB.dbPassword,
   {
     host: process.env.DB_HOST,
-    dialect: "mysql",
+    dialect: "postgres",
     logging: false,
+    // query: {
+    //   raw: true,
+    // },
     timezone: process.env.DB_TIMEZONE,
   }
 );

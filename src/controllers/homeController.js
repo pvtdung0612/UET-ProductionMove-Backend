@@ -8,7 +8,6 @@ let getHomePage = async (req, res) => {
       data: JSON.stringify(data),
     });
   } catch (e) {
-    console.log(e);
     return res.send(e);
   }
 };
@@ -23,13 +22,11 @@ let getCRUDAccount = (req, res) => {
 
 let postCRUDAccount = async (req, res) => {
   let message = await CRUDAccountService.createAccount(req.body);
-  console.log(message);
   return res.send("post crud from server");
 };
 
 let displayGetCRUDAccount = async (req, res) => {
   let data = await CRUDAccountService.getAllAccount();
-  console.log("data from display crud: ", data);
   return res.render("displayCRUDAccount.ejs", {
     dataTable: data,
   });
