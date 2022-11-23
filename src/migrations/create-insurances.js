@@ -12,11 +12,14 @@ module.exports = {
       productID: {
         type: Sequelize.INTEGER,
       },
+      errorReportsID: {
+        type: Sequelize.INTEGER,
+      },
       startDate: {
         type: Sequelize.DATE,
       },
-      insuranceTime: {
-        type: Sequelize.INTEGER,
+      endDate: {
+        type: Sequelize.DATE,
       },
       result: {
         type: Sequelize.STRING,

@@ -10,9 +10,10 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       name: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
       },
       bornDate: {
+        allowNull: false,
         type: Sequelize.DATE,
       },
       factoryID: {
@@ -27,10 +28,13 @@ module.exports = {
       productLine: {
         type: Sequelize.STRING,
       },
-      screen: {
+      price: {
         type: Sequelize.STRING,
       },
       cpu: {
+        type: Sequelize.STRING,
+      },
+      screen: {
         type: Sequelize.STRING,
       },
       image: {

@@ -124,12 +124,17 @@ let updateAccountData = (data) => {
       // }
       let account = await db.Account.findOne({
         where: { id: data.id },
+        // query: {
+        //   raw: false,
+        // },
       });
       if (account) {
         account.username = data.username;
         account.password = data.password;
         account.roleKey = data.roleKey;
         account.workplaceID = data.workplaceID;
+
+        console.log(account);
 
         await account.save();
         let allAccount = await db.Account.findAll({

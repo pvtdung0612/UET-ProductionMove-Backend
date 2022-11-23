@@ -8,7 +8,6 @@ Command:
 reference: https://sequelize.org/docs/v6/other-topics/migrations/
 Create table by migration in db: npx sequelize-cli db:migrate
 Create row by seeders in db: npx sequelize-cli db:seed:all
-install npm postgres: npm install --save-exact pg pg-hstore
 
 Nodejs version: 
 Project's: 18.12.1
