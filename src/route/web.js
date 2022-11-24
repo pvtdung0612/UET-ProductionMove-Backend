@@ -1,5 +1,6 @@
 import express from "express";
 import homeController from "../controllers/homeController";
+import accountController from "../controllers/accountController";
 
 let router = express.Router();
 
@@ -16,6 +17,8 @@ let initWebRoute = (app) => {
   router.post("/put-crud-account", homeController.putCRUDAccount);
 
   router.get("/delete-crud-account", homeController.getDeleteCRUDAccount);
+
+  router.get("/api/login", accountController.handleLogin);
 
   return app.use("/", router);
 };

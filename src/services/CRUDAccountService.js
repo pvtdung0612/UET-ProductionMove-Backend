@@ -1,5 +1,5 @@
-import bcrypt from "bcryptjs";
 import db, { sequelize } from "../models";
+import bcrypt from "bcryptjs";
 
 const salt = bcrypt.genSaltSync(10);
 
@@ -67,7 +67,7 @@ let createAccount = async (data) => {
 let hashAccountPassword = (password) => {
   return new Promise(async (resolve, reject) => {
     try {
-      let hashPassword = await bcrypt.hashSync("B4c0//", salt);
+      let hashPassword = await bcrypt.hashSync(password, salt);
       resolve(hashPassword);
     } catch (e) {
       reject(e);

@@ -20,6 +20,30 @@ connectDB();
 const PORT = process.env.PORT || 3864;
 // PORT === undefined => port = 8080
 
+// import bcrypt from "bcryptjs";
+
+// const salt = bcrypt.genSaltSync(10);
+// async function hashPassword(password) {
+//   let result = await bcrypt.hashSync(password, salt);
+//   console.log(result);
+//   return result;
+// }
+
+// let aryPasswordDefault = [
+//   hashPassword("dung"),
+//   hashPassword("kha"),
+//   hashPassword("quang"),
+//   hashPassword("dungAgent"),
+//   hashPassword("quangAgent"),
+//   hashPassword("khaAgent"),
+//   hashPassword("dungFactory"),
+//   hashPassword("quangFactory"),
+//   hashPassword("khaFactory"),
+//   hashPassword("dungInsurance"),
+//   hashPassword("quangInsurance"),
+//   hashPassword("khaInsurance"),
+// ];
+
 app.listen(PORT, () => {
   console.log("Backend Nodejs is running on the port: " + PORT);
 });
